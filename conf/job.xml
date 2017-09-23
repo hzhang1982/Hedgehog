@@ -1,0 +1,25 @@
+<profile>
+
+        <point>
+                <clazz>org/apache/spark/deploy/yarn/ApplicationMaster</clazz>
+                <method>main</method>
+                <params>([Ljava/lang/String;)V</params>
+                <type>mainclazz</type>
+        </point>
+
+        <point>
+                <clazz>org/apache/spark/deploy/yarn/ApplicationMaster</clazz>
+                <method>run</method>
+                <params>()I</params>
+                <type>duration</type>
+        </point>
+
+
+        <point>
+                <clazz>org/apache/spark/api/java/AbstractJavaRDDLike</clazz>
+                <method>flatMap</method>
+                <params>(Lorg/apache/spark/api/java/function/FlatMapFunction;)Lorg/apache/spark/api/java/JavaRDD;</params>
+                <type>duration</type>
+        </point>
+
+</profile>

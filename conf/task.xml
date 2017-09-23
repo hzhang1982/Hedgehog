@@ -1,0 +1,40 @@
+<profile>
+        <point>
+                <clazz>org/apache/spark/executor/CoarseGrainedExecutorBackend$</clazz>
+                <method>run</method>
+                <params>(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;ILjava/lang/String;Lscala/Option;Lscala/collection/Seq;)V</params>
+                <type>mainclazz</type>
+        </point>
+
+        <point>
+                <clazz>org/apache/spark/storage/BlockManager$$anonfun$doPutIterator$1</clazz>
+                <method>apply</method>
+                <params>(Lorg/apache/spark/storage/BlockInfo;)Lscala/Option;</params>
+                <io>input</io>
+                <order>5</order>
+                <paramtype>J</paramtype>
+                <param>size</param>
+                <type>value</type>
+        </point>
+
+        <point>
+                <clazz>org/apache/spark/storage/memory/MemoryStore</clazz>
+                <method>putIteratorAsValues</method>
+                <params>(Lorg/apache/spark/storage/BlockId;Lscala/collection/Iterator;Lscala/reflect/ClassTag;)Lscala/util/Either;</params>
+                <type>duration</type>
+        </point>
+
+        <point>
+                <clazz>org/apache/spark/storage/memory/MemoryStore</clazz>
+                <method>putIteratorAsBytes</method>
+                <params>(Lorg/apache/spark/storage/BlockId;Lscala/collection/Iterator;Lscala/reflect/ClassTag;Lorg/apache/spark/memory/MemoryMode;)Lscala/util/Either;</params>
+                <type>duration</type>
+        </point>
+
+        <point>
+                <clazz>org/apache/spark/storage/DiskStore</clazz>
+                <method>put</method>
+                <params>(Lorg/apache/spark/storage/BlockId;Lscala/Function1;)V</params>
+                <type>duration</type>
+        </point>
+</profile>
